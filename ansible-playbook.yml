@@ -13,7 +13,7 @@
       tags:
          - create-dir
 
-    - name: Copy the war file, dockerfile & lwplabs-com.yml to docker master server
+    - name: Copy the war file, dockerfile & docker-stack.yml to docker master server
       copy:
         src: "{{ ANSIBLE_WORKSPACE }}/"
         dest: /tmp/{{ job_name }}
@@ -95,7 +95,7 @@
     - debug:
         var: out5
 
-- name: "Play 3 docker stack deploy"
+- name: "Play 4 docker stack deploy"
   hosts: dockerMaster
   become: yes
   tasks:
