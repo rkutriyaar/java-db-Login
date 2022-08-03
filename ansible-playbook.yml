@@ -88,7 +88,7 @@
         name: 127.0.0.1:5000/lwplabslogin
         tag: "latest"
         push: yes
-        nocache: yes
+        build.nocache: yes
         source: build
       register: out5
       tags: docker-image-build
